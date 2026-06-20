@@ -1,12 +1,7 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
-export type Project = {
-    id: string;
-    name: string;
-    count?: number;
-    color: string;
-};
+import type { Project } from './types';
 
 export const useProjectsStore = defineStore('projects', () => {
     const projects = ref<Project[]>([

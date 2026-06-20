@@ -7,6 +7,6 @@ export default defineNuxtConfig({
         autoImport: false,
     },
     pinia: {
-        storesDirs: ['app/stores/**'],
+        storesDirs: ['app/features/**/model/**'],
     },
 });
