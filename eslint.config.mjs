@@ -154,14 +154,19 @@ export default withNuxt(
       ],
 
       'vue/attributes-order': 'error',
+
+      'vue/padding-line-between-tags': 'error',
     },
 
-    files: ['**/*.ts', '**/*.vue', '**/*.tsx', '**/*.jsx'],
+    files: ['app/**/*.ts', '**/*.vue', '**/*.tsx', '**/*.jsx'],
     languageOptions: {
       parserOptions: {
         project: './.nuxt/tsconfig.app.json',
       },
     },
+  },
+  {
+    files: ['*.ts', '*.js', '*.mjs', '*.cjs'],
   },
   eslintConfigPrettier,
 );

@@ -9,7 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "prepare": "husky install",
-    "format": "prettier . --write",
+    "format": "prettier . --write && eslint --fix",
     "format:check": "prettier . --check"
   },
   "dependencies": {
