@@ -1,75 +1,72 @@
-# Nuxt Minimal Starter
+# Nuxt Boilerplate
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Personal starter for new Nuxt projects. Not an app — a minimal, opinionated base you clone and build on.
+
+Based on **Nuxt 4** + **Vue 3** + **TypeScript**, with ESLint (lint + format) and pre-commit hooks. No UI kit, no auth, no tests, no Prettier — those are project decisions, not starter defaults.
+
+## What's included
+
+| Area | Choice |
+| --- | --- |
+| Framework | Nuxt 4 (`app/` directory) |
+| Language | TypeScript |
+| Package manager | pnpm |
+| Lint / format | ESLint flat config via [`@nuxt/eslint`](https://eslint.nuxt.com/) + [`@qstanay/eslint-config`](https://www.npmjs.com/package/@qstanay/eslint-config) (`@stylistic`, no Prettier) |
+| Git hooks | Husky + lint-staged (ESLint `--fix` on staged files) |
+| Editor | VS Code / Cursor settings: ESLint as formatter, format on save |
+
+## What's intentionally omitted
+
+- **Tests** (Vitest / Playwright) — add when there is real logic to cover
+- **Prettier** — formatting goes through ESLint
+- **UI libraries, CSS frameworks, state, i18n, auth** — pick per project
+- **CI** — wire up when the repo needs it
+
+## Requirements
+
+- Node.js 20+
+- [pnpm](https://pnpm.io/)
 
 ## Setup
 
-Make sure to install dependencies:
-
 ```bash
-# npm
-npm install
-
-# pnpm
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+Rename `name` in `package.json` to your project name.
 
-Start the development server on `http://localhost:3000`:
+## Scripts
 
-```bash
-# npm
-npm run dev
+| Command | Purpose |
+| --- | --- |
+| `pnpm dev` | Dev server |
+| `pnpm build` | Production build |
+| `pnpm preview` | Preview the production build |
+| `pnpm lint` | Check lint / format |
+| `pnpm lint:fix` | Auto-fix lint / format |
 
-# pnpm
-pnpm dev
+## Project layout
 
-# yarn
-yarn dev
-
-# bun
-bun run dev
+```text
+app/
+  app.vue          # App root (Nuxt welcome page until you replace it)
+public/            # Static assets
+nuxt.config.ts     # Nuxt config
+eslint.config.mjs  # ESLint flat config
 ```
 
-## Production
+## ESLint style defaults
 
-Build the application for production:
+Configured in `eslint.config.mjs`:
 
-```bash
-# npm
-npm run build
+- semicolons
+- single quotes
+- 2-space indent
+- max line length 100
 
-# pnpm
-pnpm build
+Install the [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension; formatter settings live in `.vscode/settings.json`.
 
-# yarn
-yarn build
+## Docs
 
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction)
+- [`@nuxt/eslint`](https://eslint.nuxt.com/)

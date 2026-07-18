@@ -1,9 +1,0 @@
-.nuxt
-.output
-dist
-coverage
-node_modules
-
-pnpm-lock.yaml
-
-*.log
