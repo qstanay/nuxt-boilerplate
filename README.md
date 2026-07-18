@@ -24,7 +24,7 @@ Based on **Nuxt 4** + **Vue 3** + **TypeScript**, with ESLint (lint + format) an
 
 ## Requirements
 
-- Node.js 20+
+- Node.js `^22.12.0 || ^24.11.0 || >=26.0.0` (Nuxt 4 engines)
 - [pnpm](https://pnpm.io/)
 
 ## Setup
@@ -70,3 +70,7 @@ Install the [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeume
 
 - [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction)
 - [`@nuxt/eslint`](https://eslint.nuxt.com/)
+
+## License
+
+[MIT](./LICENSE)
